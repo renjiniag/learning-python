@@ -6,7 +6,7 @@ for i in range(0,n):
     lst.append(num)
 
 add=int(input("Enter the number you want the sum as : "))
-ans=[(x,y) for x in lst for y in lst if x+y==add]
+ans=[(x,y) for x in lst for y in lst[lst.index(x)+1::] if x+y==add]
 if len(ans)!=0:
     print(ans)
 else:
